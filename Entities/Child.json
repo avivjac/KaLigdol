@@ -1,0 +1,38 @@
+{
+  "name": "Child",
+  "type": "object",
+  "properties": {
+    "first_name": {
+      "type": "string",
+      "description": "שם פרטי של הילד"
+    },
+    "last_name": {
+      "type": "string",
+      "description": "שם משפחה של הילד"
+    },
+    "id_number": {
+      "type": "string",
+      "description": "מספר תעודת זהות"
+    },
+    "birth_date": {
+      "type": "string",
+      "format": "date",
+      "description": "תאריך לידה"
+    },
+    "gender": {
+      "type": "string",
+      "enum": [
+        "male",
+        "female"
+      ],
+      "description": "מגדר הילד"
+    }
+  },
+  "required": [
+    "first_name",
+    "last_name",
+    "id_number",
+    "birth_date",
+    "gender"
+  ]
+}

@@ -1,0 +1,63 @@
+{
+  "name": "TestResult",
+  "type": "object",
+  "properties": {
+    "child_id": {
+      "type": "string",
+      "description": "מזהה הילד"
+    },
+    "total_score": {
+      "type": "number",
+      "description": "ציון כולל"
+    },
+    "max_score": {
+      "type": "number",
+      "description": "ציון מקסימלי אפשרי"
+    },
+    "answers": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "question_id": {
+            "type": "number"
+          },
+          "answer": {
+            "type": "string"
+          },
+          "score": {
+            "type": "number"
+          },
+          "time_taken": {
+            "type": "number"
+          }
+        }
+      },
+      "description": "תשובות של הילד"
+    },
+    "recommendation": {
+      "type": "string",
+      "enum": [
+        "normal",
+        "speech_therapy",
+        "retest",
+        "very_low",
+        "low",
+        "below_average",
+        "average",
+        "above_average",
+        "high",
+        "excellent",
+        "undefined"
+      ],
+      "description": "המלצה לפי התוצאות"
+    }
+  },
+  "required": [
+    "child_id",
+    "total_score",
+    "max_score",
+    "answers",
+    "recommendation"
+  ]
+}
